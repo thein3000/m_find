@@ -8,6 +8,12 @@ REGISTER
 curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar" http://localhost:8000/musi_find_backend/auth/register/
 curl -X POST -d "username=raul123&password=secretos&first_name=Raul" http://localhost:8000/musi_find_backend/auth/register/
 curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=pedro123&password=secretos&first_name=Pedro" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=juan123&password=secretos&first_name=Juan" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=rodrigo123&password=secretos&first_name=Rodrigo" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=raul123&password=secretos&first_name=Raul" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo" http://localhost:8000/musi_find_backend/auth/register/
 
 CONSEGUIR TODO CATALOGO DE INSTRUMENTOS
 curl -X GET http://localhost:8000/musi_find_backend/retrieve_instruments/ -H "Authorization: Token 2ec4184426741dbbf12c633100e3fee2de0550e1"
@@ -57,3 +63,5 @@ CARGAR SI PERFIL YA ES FOLLOWEADO POR TI
 *CARGAR RATING DE ALGUIEN
 
 *DAR DE ALTA UN RATING 
+
+python manage.py dumpdata --format=json musi_find_backend > musi_find_backend/fixtures/initial_data.json

@@ -1,1 +1,335 @@
-[{"model": "musi_find_backend.instrument", "pk": 2, "fields": {"name": "Guitarra"}}, {"model": "musi_find_backend.instrument", "pk": 3, "fields": {"name": "Bateria"}}, {"model": "musi_find_backend.instrument", "pk": 4, "fields": {"name": "Violin"}}, {"model": "musi_find_backend.instrument", "pk": 5, "fields": {"name": "Flauta dulce"}}, {"model": "musi_find_backend.instrument", "pk": 6, "fields": {"name": "Saxofon"}}, {"model": "musi_find_backend.instrument", "pk": 7, "fields": {"name": "Piano"}}, {"model": "musi_find_backend.instrument", "pk": 8, "fields": {"name": "Acordion"}}, {"model": "musi_find_backend.instrument", "pk": 9, "fields": {"name": "Trompeta"}}, {"model": "musi_find_backend.genre", "pk": 1, "fields": {"name": "Rock"}}, {"model": "musi_find_backend.genre", "pk": 2, "fields": {"name": "Metal"}}, {"model": "musi_find_backend.genre", "pk": 3, "fields": {"name": "Clasico"}}, {"model": "musi_find_backend.genre", "pk": 4, "fields": {"name": "Pop"}}, {"model": "musi_find_backend.genre", "pk": 5, "fields": {"name": "Jazz"}}, {"model": "musi_find_backend.genre", "pk": 6, "fields": {"name": "Folclorico"}}, {"model": "musi_find_backend.genre", "pk": 7, "fields": {"name": "Country"}}, {"model": "musi_find_backend.genre", "pk": 8, "fields": {"name": "Blues"}}, {"model": "musi_find_backend.genre", "pk": 9, "fields": {"name": "Rock alternativo"}}, {"model": "musi_find_backend.profile", "pk": 1, "fields": {"is_musician": false, "description": "Artista aspirante en busca de aprendizaje", "mobile": "8113995183", "email": "oscara99@gmail.com", "facebook": "oabrego2", "twitter": "", "instrument": 3, "genre": null}}, {"model": "musi_find_backend.profile", "pk": 2, "fields": {"is_musician": false, "description": "", "mobile": "", "email": "", "facebook": "", "twitter": "", "instrument": null, "genre": null}}, {"model": "musi_find_backend.profile", "pk": 3, "fields": {"is_musician": false, "description": "Artista aspirante en busca de aprendizaje", "mobile": "8113995183", "email": "oscara99@gmail.com", "facebook": "oabrego2", "twitter": "", "instrument": 3, "genre": 5}}]
+[
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 2,
+        "fields": {
+            "name": "Guitarra"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 3,
+        "fields": {
+            "name": "Bateria"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 4,
+        "fields": {
+            "name": "Violin"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 5,
+        "fields": {
+            "name": "Flauta dulce"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 6,
+        "fields": {
+            "name": "Saxofon"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 7,
+        "fields": {
+            "name": "Piano"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 8,
+        "fields": {
+            "name": "Acordion"
+        }
+    },
+    {
+        "model": "musi_find_backend.instrument",
+        "pk": 9,
+        "fields": {
+            "name": "Trompeta"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Rock"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Metal"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Clasico"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Pop"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Jazz"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Folclorico"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 7,
+        "fields": {
+            "name": "Country"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Blues"
+        }
+    },
+    {
+        "model": "musi_find_backend.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Rock alternativo"
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 1,
+        "fields": {
+            "is_musician": true,
+            "description": "Aprendiz de guitarra acustica. Estoy disponible para eventos, desde 200 la hora. Voy a toda el area metropolitana de Monterrey.",
+            "mobile": "8113995183",
+            "email": "oscar.abrego@gmail.com",
+            "facebook": "oabrego2",
+            "twitter": "",
+            "instrument": 2,
+            "genre": 7
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 2,
+        "fields": {
+            "is_musician": false,
+            "description": "Soy baterista desde hace 10 años, actualmente estoy buscando una banda por si les interesa, tambien estoy disponible para asistir a tocadas. Ahi esta mi informacion.",
+            "mobile": "8116060302",
+            "email": "raul.musico9@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 3,
+            "genre": 1
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 3,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 4,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 5,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 6,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 7,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 8,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 9,
+        "fields": {
+            "is_musician": false,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "samantha.musica@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 4,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 10,
+        "fields": {
+            "profile": 1,
+            "title": "Educación",
+            "content": "Estudiante de la facultad de música de la UANL",
+            "publish_date": "2019-04-02"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 11,
+        "fields": {
+            "profile": 1,
+            "title": "Experiencia",
+            "content": "Llevo 3 años con la guitarra, he estado en 2 bandas diferentes, he participao en 3 CocaCola-Fests.",
+            "publish_date": "2019-04-02"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 12,
+        "fields": {
+            "profile": 2,
+            "title": "Experiencia",
+            "content": "Llevo 10 años con la bateria, he estado en 2 bandas diferentes, he participao en 3 CocaCola-Fests.",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 13,
+        "fields": {
+            "profile": 1,
+            "title": "Educacion",
+            "content": "Estudiante de la facultad de música de la UANL",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 1,
+        "fields": {
+            "follower_id": 1,
+            "followed_id": 2
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 2,
+        "fields": {
+            "follower_id": 1,
+            "followed_id": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 3,
+        "fields": {
+            "follower_id": 1,
+            "followed_id": 4
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 4,
+        "fields": {
+            "follower_id": 2,
+            "followed_id": 1
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 5,
+        "fields": {
+            "follower_id": 2,
+            "followed_id": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.follow",
+        "pk": 6,
+        "fields": {
+            "follower_id": 3,
+            "followed_id": 1
+        }
+    }
+]

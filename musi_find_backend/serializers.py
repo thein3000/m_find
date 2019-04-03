@@ -22,8 +22,9 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user = super(CreateUserSerializer, self).create(validated_data)
         user.set_password(validated_data['password'])
         user.save()
-        new_profile = Profile(profile_id=user.id)
-        new_profile.save()
+        if len(Profile.objects.filter(profile_id=user.id)) == 0:
+            new_profile = Profile(profile_id=user.id)
+            new_profile.save()
         return user
 
 
