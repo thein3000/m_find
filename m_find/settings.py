@@ -25,8 +25,8 @@ SECRET_KEY = 'g$*f0g#djwisam@om9z_6-am7w*!)vx#a08=_r)gzy@2-vgp5s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['m-find.herokuapp.com']
 
 # Application definition
 
@@ -53,6 +53,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -139,3 +140,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 FIXTURE_DIRS = (
    './musi_find_backend/fixtures/',
 )
+
+# import dj_database_url 
+# prod_db  =  dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)

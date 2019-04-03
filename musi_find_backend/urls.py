@@ -1,7 +1,6 @@
 from django.conf.urls import url
 from rest_framework.authtoken.views import obtain_auth_token
 from .views import CreateUserAPIView, LogoutUserAPIView
-# from .views import ProfileInstruments
 from .views import HandleProfile, RetrieveGenres, RetrieveInstruments, ListFlatProfiles, UpdateIsMusician
 from .views import AddFollow, HandlePublication, ListFollowedProfiles, FullProfile
 
