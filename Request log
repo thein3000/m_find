@@ -17,6 +17,7 @@ curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo" http://loca
 
 CONSEGUIR TODO CATALOGO DE INSTRUMENTOS
 curl -X GET http://localhost:8000/musi_find_backend/retrieve_instruments/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_instruments/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
 CONSEGUIR TODO CATALOGO DE GENEROS
 curl -X GET http://localhost:8000/musi_find_backend/retrieve_genres/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"

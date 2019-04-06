@@ -5,6 +5,7 @@ from musi_find_backend.models import Instrument
 from musi_find_backend.models import Genre
 from musi_find_backend.models import Follow
 from musi_find_backend.models import Publication
+from django.contrib.auth.models import User
 
 # Todo el rollo de autenticacion, sesiones y usuarios
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -61,16 +62,27 @@ class InstrumentSerializer(serializers.ModelSerializer):
 class ProfileViewerSerializer(serializers.ModelSerializer):
     instrument_name = serializers.SerializerMethodField()
     genre_name = serializers.SerializerMethodField()
+    profile_name = serializers.SerializerMethodField()
+    profile_username = serializers.SerializerMethodField()
     class Meta:
         model = Profile
-        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name')
+        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_name','profile_username')
 
     def get_instrument_name(self, obj):
         return obj.instrument.name
 
     def get_genre_name(self, obj):
         return obj.genre.name
+    
+    def get_profile_name(self, obj):
+        user = User.objects.get(pk=obj.profile_id)
+        full_name = user.first_name + ' ' + user.last_name
+        return full_name
 
+    def get_profile_username(self, obj):
+        user = User.objects.get(pk=obj.profile_id)
+        username = user.username
+        return username
 
 # Dar de alta follows
 class FollowSerializer(serializers.ModelSerializer):
