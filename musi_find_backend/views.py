@@ -114,7 +114,7 @@ class ListFlatProfiles(APIView):
     authentication_classes = (authentication.TokenAuthentication,)
 
     def get(self, request, format=None):
-        profiles = Profile.objects.all().exclude(profile_id = request.user.id)
+        profiles = Profile.objects.all().exclude(profile_id = request.user.id).filter(is_musician=True)
         serializer = ProfileViewerSerializer(profiles, many=True)
         return Response(serializer.data)
 
@@ -134,7 +134,7 @@ class ListFollowedProfiles(APIView):
 
     def get(self, request, format=None):
         followed_list = Follow.objects.filter(follower_id = request.user.id).values_list('followed_id', flat=True)
-        profiles = Profile.objects.filter(pk__in=followed_list)
+        profiles = Profile.objects.filter(pk__in=followed_list).filter(is_musician=True)
         serializer = ProfileViewerSerializer(profiles, many=True)
         return Response(serializer.data)
 

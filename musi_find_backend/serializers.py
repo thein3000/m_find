@@ -66,7 +66,7 @@ class ProfileViewerSerializer(serializers.ModelSerializer):
     profile_username = serializers.SerializerMethodField()
     class Meta:
         model = Profile
-        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_name','profile_username')
+        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_name','profile_username','is_musician')
 
     def get_instrument_name(self, obj):
         return obj.instrument.name
@@ -96,7 +96,7 @@ class FollowSerializer(serializers.ModelSerializer):
 class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
-        fields = ('title','content',)
+        fields = ('id','title','content',)
 
 
 class FullProfileFlatSerializer(serializers.ModelSerializer):
@@ -106,7 +106,7 @@ class FullProfileFlatSerializer(serializers.ModelSerializer):
     profile_username = serializers.SerializerMethodField()
     class Meta:
         model = Profile
-        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_username','profile_name')
+        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_username','profile_name','is_musician')
 
     def get_instrument_name(self, obj):
         return obj.instrument.name
