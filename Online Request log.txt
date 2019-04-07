@@ -48,11 +48,9 @@ curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/full_profile/
 CONSEGUIR PUBLICACIONES DE UN PERFIL
 curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/?profile_id=3 -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
-
-
-
-
 CARGAR SI PERFIL YA ES FOLLOWEADO POR TI
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
+
 
 
 

@@ -73,6 +73,16 @@ class HandleProfile(APIView):
 
 class AddFollow(APIView):
     authentication_classes = (authentication.TokenAuthentication,)
+    
+    def get(self, request, format=None):
+        followed_id = int(self.request.query_params.get('profile_id', None))
+        follow = Follow.objects.filter(follower_id = request.user.id).filter(followed_id=followed_id)
+        if len(follow) >= 1:
+            is_followed = True
+        else:
+            is_followed = False
+        return Response({"is_followed":is_followed})    
+
 
     def post(self, request, format=None):
         serializer = FollowSerializer(data=request.data)
