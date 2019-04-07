@@ -7,8 +7,11 @@ select profile_id, mobile, twitter, facebook, email ,instrument_id, genre_id, is
 --SELECT * FROM musi_find_backend_rating;
 sELECT * FROM musi_find_backend_follow;
 --Raul
+UPDATE musi_find_backend_profile SET is_musician = True where profile_id =2;
 UPDATE musi_find_backend_profile SET facebook = 'raul.emg' where profile_id =2;
 UPDATE musi_find_backend_profile SET mobile = '8125828661' where profile_id =2;
 --Oscar
 UPDATE musi_find_backend_profile SET twitter = 'OscarAbregoDiaz' where profile_id =1;
 UPDATE musi_find_backend_profile SET mobile = '8113995183' where profile_id =1;
+--Hugo
+UPDATE musi_find_backend_profile SET is_musician = True where profile_id =9;
