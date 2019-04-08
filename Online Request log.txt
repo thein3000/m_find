@@ -51,7 +51,8 @@ curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_pu
 CARGAR SI PERFIL YA ES FOLLOWEADO POR TI
 curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
-
+CONSEGUIR DATOS DE PROPIO PERFIL
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
 
 

@@ -139,6 +139,16 @@ class FullProfile(APIView):
         return Response(serializer.data)
 
 
+class OwnFullProfile(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def get(self, request, format=None):
+        profile_id = request.user.id
+        profile = Profile.objects.get(pk=profile_id)
+        serializer = FullProfileFlatSerializer(profile)
+        return Response(serializer.data)
+
+
 class ListFollowedProfiles(APIView):
     authentication_classes = (authentication.TokenAuthentication,)
 
