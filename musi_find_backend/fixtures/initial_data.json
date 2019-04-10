@@ -123,7 +123,7 @@
         "pk": 1,
         "fields": {
             "is_musician": true,
-            "description": "Aprendiz de guitarra acustica. Estoy disponible para eventos, desde 200 la hora. Voy a toda el area metropolitana de Monterrey.",
+            "description": "Aprendiz del violin. Ofrezco mis servicios para eventos, desde $300 la hora. Voy a toda el area metropolitana de Monterrey.",
             "mobile": "8113995183",
             "email": "oscar.abrego@gmail.com",
             "facebook": "oabrego2",
@@ -264,7 +264,7 @@
         "fields": {
             "profile": 1,
             "title": "Educación",
-            "content": "Estudiante de la facultad de música de la UANL. Actualmente cursando 8vo semestre.",
+            "content": "Estudiante del instituto anglobritanico de las artes musicales. Actualmente cursando 8vo trimestre.",
             "publish_date": "2019-04-02"
         }
     },
@@ -274,7 +274,7 @@
         "fields": {
             "profile": 1,
             "title": "Experiencia",
-            "content": "Llevo 3 años con la guitarra, he estado en 2 bandas diferentes, he sido contratado para tocar en 9 eventos distintos.",
+            "content": "Llevo 3 años con el violin, he sido contratado para tocar en 9 eventos distintos.",
             "publish_date": "2019-04-02"
         }
     },
@@ -294,7 +294,7 @@
         "fields": {
             "profile": 1,
             "title": "Precios",
-            "content": "Para eventos regulares cobro 200 pesos la hora (mas costo de traslado). Para eventos en fecha especial cobro 400 la hora.",
+            "content": "Para eventos regulares cobro $300 pesos la hora (mas costo de traslado). Para eventos en fecha especial cobro $400 la hora.",
             "publish_date": "2019-04-03"
         }
     },

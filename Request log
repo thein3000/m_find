@@ -5,7 +5,7 @@ LOGOUT
 curl -X GET http://localhost:8000/musi_find_backend/auth/logout/ -H "Authorization: Token 4f119c64348574580a9d1939ddac967a2545fa07"
 
 REGISTER
-curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar&last_name=Oscar" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar&last_name=Abrego" http://localhost:8000/musi_find_backend/auth/register/
 curl -X POST -d "username=raul123&password=secretos&first_name=Raul&last_name=Perez" http://localhost:8000/musi_find_backend/auth/register/
 curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha&last_name=Nieto" http://localhost:8000/musi_find_backend/auth/register/
 curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime&last_name=Mausan" http://localhost:8000/musi_find_backend/auth/register/

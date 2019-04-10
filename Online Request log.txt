@@ -2,57 +2,58 @@ LOGIN
 curl -X POST -d "username=oabrego&password=secretos" https://m-find.herokuapp.com/musi_find_backend/auth/login/
 
 LOGOUT
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/auth/logout/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/auth/logout/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 REGISTER
-curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=raul123&password=secretos&first_name=Raul" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=pedro123&password=secretos&first_name=Pedro" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=juan123&password=secretos&first_name=Juan" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=rodrigo123&password=secretos&first_name=Rodrigo" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=martinez123&password=secretos&first_name=Martinez" https://m-find.herokuapp.com/musi_find_backend/auth/register/
-curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar&last_name=Abrego" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=raul123&password=secretos&first_name=Raul&last_name=Perez" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha&last_name=Nieto" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime&last_name=Mausan" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=pedro123&password=secretos&first_name=Pedro&last_name=Lopez" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=juan123&password=secretos&first_name=Juan&last_name=Cisneros" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=rodrigo123&password=secretos&first_name=Rodrigo&last_name=Cardona" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=martinez123&password=secretos&first_name=Martinez&last_name=Nieto" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo&last_name=Samaniego" https://m-find.herokuapp.com/musi_find_backend/auth/register/
+curl -X POST -d "username=luis123&password=secretos&first_name=Luis&last_name=Guerra" https://m-find.herokuapp.com/musi_find_backend/auth/register/
 
 CONSEGUIR TODO CATALOGO DE INSTRUMENTOS
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_instruments/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_instruments/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR TODO CATALOGO DE GENEROS
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_genres/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_genres/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 ACTUALIZAR PROPIO PERFIL
-curl -X POST -d "&description=Aspirante en busca de aprendizaje&mobile=8113995183&email=oscara99@gmail.com&facebook=oabrego2&instrument=3&genre=5" https://m-find.herokuapp.com/musi_find_backend/profile/handle_profile/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X POST -d "&description=Aspirante en busca de aprendizaje&mobile=8113995183&email=oscara99@gmail.com&facebook=oabrego2&instrument=3&genre=5" https://m-find.herokuapp.com/musi_find_backend/profile/handle_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR TODOS LOS PERFILES DE OTROS MUSICOS, PARA SER FILTRADO POR EL LADO DE REACT NATIVE [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_flat_profiles/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_flat_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR DE PROPIO PERFIL CAMPO IS_MUSICIAN
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/update_is_musician/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/update_is_musician/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 ACTUALIZAR PROPIO PERFIL CAMPO IS_MUSICIAN
-curl -X POST -d "&is_musician=true" https://m-find.herokuapp.com/musi_find_backend/profile/update_is_musician/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X POST -d "&is_musician=true" https://m-find.herokuapp.com/musi_find_backend/profile/update_is_musician/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 DAR DE ALTA UN FOLLOW PROPIO A OTRO PERFIL
-curl -X POST -d "&followed_id=3" https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X POST -d "&followed_id=3" https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 DAR DE ALTA UNA PUBLICACION DE PROPIO PERFIL
-curl -X POST -d "&title=Educacion&content=Estudiante de la facultad de música de la UANL" https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X POST -d "&title=Educacion&content=Estudiante de la facultad de música de la UANL" https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR TODOS LOS PERFILES DE MUSICO FOLLOWEADOS POR UNO [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_followed_profiles/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_followed_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR DATOS PERFIL DE ALQUIEN INCLUYENDO [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/full_profile/?profile_id=3 -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/full_profile/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR PUBLICACIONES DE UN PERFIL
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/?profile_id=3 -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CARGAR SI PERFIL YA ES FOLLOWEADO POR TI
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 CONSEGUIR DATOS DE PROPIO PERFIL
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token 2f536b0950601c97262850f4a18cb160cd5bd5aa"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
 
 
