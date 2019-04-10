@@ -24,7 +24,9 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         if len(Profile.objects.filter(profile_id=user.id)) == 0:
-            new_profile = Profile(profile_id=user.id)
+            first_instrument = Instrument.objects.first()
+            first_genre = Genre.objects.first()
+            new_profile = Profile(profile_id=user.id,instrument=first_instrument,genre=first_genre)
             new_profile.save()
         return user
 

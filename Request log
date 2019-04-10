@@ -5,15 +5,16 @@ LOGOUT
 curl -X GET http://localhost:8000/musi_find_backend/auth/logout/ -H "Authorization: Token 4f119c64348574580a9d1939ddac967a2545fa07"
 
 REGISTER
-curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=raul123&password=secretos&first_name=Raul" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=pedro123&password=secretos&first_name=Pedro" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=juan123&password=secretos&first_name=Juan" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=rodrigo123&password=secretos&first_name=Rodrigo" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=martinez123&password=secretos&first_name=Martinez" http://localhost:8000/musi_find_backend/auth/register/
-curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar&last_name=Oscar" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=raul123&password=secretos&first_name=Raul&last_name=Perez" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=samantha123&password=secretos&first_name=Samantha&last_name=Nieto" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=jaime123&password=secretos&first_name=Jaime&last_name=Mausan" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=pedro123&password=secretos&first_name=Pedro&last_name=Lopez" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=juan123&password=secretos&first_name=Juan&last_name=Cisneros" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=rodrigo123&password=secretos&first_name=Rodrigo&last_name=Cardona" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=martinez123&password=secretos&first_name=Martinez&last_name=Nieto" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo&last_name=Samaniego" http://localhost:8000/musi_find_backend/auth/register/
+curl -X POST -d "username=luis123&password=secretos&first_name=Luis&last_name=Guerra" http://localhost:8000/musi_find_backend/auth/register/
 
 CONSEGUIR TODO CATALOGO DE INSTRUMENTOS
 curl -X GET http://localhost:8000/musi_find_backend/retrieve_instruments/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
@@ -32,7 +33,7 @@ CONSEGUIR DE PROPIO PERFIL CAMPO IS_MUSICIAN
 curl -X GET http://localhost:8000/musi_find_backend/update_is_musician/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
 ACTUALIZAR PROPIO PERFIL CAMPO IS_MUSICIAN
-curl -X POST -d "&is_musician=true" http://localhost:8000/musi_find_backend/update_is_musician/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
+curl -X POST -d "&is_musician=true" http://localhost:8000/musi_find_backend/profile/update_is_musician/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"
 
 DAR DE ALTA UN FOLLOW PROPIO A OTRO PERFIL
 curl -X POST -d "&followed_id=3" http://localhost:8000/musi_find_backend/follow/add_follow/ -H "Authorization: Token 22e8d7515f4ab63b7d24e4a8638217011fe7033a"

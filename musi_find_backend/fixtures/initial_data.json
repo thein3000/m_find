@@ -1,56 +1,56 @@
 [
     {
         "model": "musi_find_backend.instrument",
-        "pk": 2,
+        "pk": 1,
         "fields": {
             "name": "Guitarra"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 3,
+        "pk": 2,
         "fields": {
             "name": "Bateria"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 4,
+        "pk": 3,
         "fields": {
             "name": "Violin"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 5,
+        "pk": 4,
         "fields": {
             "name": "Flauta dulce"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 6,
+        "pk": 5,
         "fields": {
             "name": "Saxofon"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 7,
+        "pk": 6,
         "fields": {
             "name": "Piano"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 8,
+        "pk": 7,
         "fields": {
             "name": "Acordion"
         }
     },
     {
         "model": "musi_find_backend.instrument",
-        "pk": 9,
+        "pk": 8,
         "fields": {
             "name": "Trompeta"
         }
@@ -128,7 +128,7 @@
             "email": "oscar.abrego@gmail.com",
             "facebook": "oabrego2",
             "twitter": "",
-            "instrument": 2,
+            "instrument": 1,
             "genre": 7
         }
     },
@@ -136,13 +136,13 @@
         "model": "musi_find_backend.profile",
         "pk": 2,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Soy baterista desde hace 10 años, actualmente estoy buscando una banda por si les interesa, tambien estoy disponible para asistir a tocadas. Ahi esta mi informacion.",
             "mobile": "8116060302",
             "email": "raul.musico9@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 3,
+            "instrument": 2,
             "genre": 1
         }
     },
@@ -150,13 +150,13 @@
         "model": "musi_find_backend.profile",
         "pk": 3,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -164,13 +164,13 @@
         "model": "musi_find_backend.profile",
         "pk": 4,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -178,13 +178,13 @@
         "model": "musi_find_backend.profile",
         "pk": 5,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -192,13 +192,13 @@
         "model": "musi_find_backend.profile",
         "pk": 6,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -206,13 +206,13 @@
         "model": "musi_find_backend.profile",
         "pk": 7,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -220,13 +220,13 @@
         "model": "musi_find_backend.profile",
         "pk": 8,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
             "genre": 3
         }
     },
@@ -234,39 +234,53 @@
         "model": "musi_find_backend.profile",
         "pk": 9,
         "fields": {
-            "is_musician": false,
+            "is_musician": true,
             "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
             "mobile": "8115565343",
             "email": "samantha.musica@gmail.com",
             "facebook": "",
             "twitter": "",
-            "instrument": 4,
+            "instrument": 3,
+            "genre": 3
+        }
+    },
+    {
+        "model": "musi_find_backend.profile",
+        "pk": 10,
+        "fields": {
+            "is_musician": true,
+            "description": "Llevo 5 años de experiencia con el violin, doy clases de Lunes a Viernes 3:00 - 6:00. Cobro 400 por sesion, no se ocupa experiencia previa.",
+            "mobile": "8115565343",
+            "email": "luis.musico@gmail.com",
+            "facebook": "",
+            "twitter": "",
+            "instrument": 3,
             "genre": 3
         }
     },
     {
         "model": "musi_find_backend.publication",
-        "pk": 10,
+        "pk": 1,
         "fields": {
             "profile": 1,
             "title": "Educación",
-            "content": "Estudiante de la facultad de música de la UANL",
+            "content": "Estudiante de la facultad de música de la UANL. Actualmente cursando 8vo semestre.",
             "publish_date": "2019-04-02"
         }
     },
     {
         "model": "musi_find_backend.publication",
-        "pk": 11,
+        "pk": 2,
         "fields": {
             "profile": 1,
             "title": "Experiencia",
-            "content": "Llevo 3 años con la guitarra, he estado en 2 bandas diferentes, he participao en 3 CocaCola-Fests.",
+            "content": "Llevo 3 años con la guitarra, he estado en 2 bandas diferentes, he sido contratado para tocar en 9 eventos distintos.",
             "publish_date": "2019-04-02"
         }
     },
     {
         "model": "musi_find_backend.publication",
-        "pk": 12,
+        "pk": 3,
         "fields": {
             "profile": 2,
             "title": "Experiencia",
@@ -276,11 +290,61 @@
     },
     {
         "model": "musi_find_backend.publication",
-        "pk": 13,
+        "pk": 4,
         "fields": {
             "profile": 1,
+            "title": "Precios",
+            "content": "Para eventos regulares cobro 200 pesos la hora (mas costo de traslado). Para eventos en fecha especial cobro 400 la hora.",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 5,
+        "fields": {
+            "profile": 3,
             "title": "Educacion",
             "content": "Estudiante de la facultad de música de la UANL",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 6,
+        "fields": {
+            "profile": 2,
+            "title": "Ubicación",
+            "content": "Vivo en el municipio de Guadalupe, Nuevo León. Pero me muevo mucho por la zon cumbres y barrio antiguo.",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 7,
+        "fields": {
+            "profile": 5,
+            "title": "Educacion",
+            "content": "Estudiante de la facultad de música de la UANL",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 8,
+        "fields": {
+            "profile": 6,
+            "title": "Educacion",
+            "content": "Estudiante de la facultad de música de la UANL",
+            "publish_date": "2019-04-03"
+        }
+    },
+    {
+        "model": "musi_find_backend.publication",
+        "pk": 9,
+        "fields": {
+            "profile": 4,
+            "title": "Aclaraciones",
+            "content": "Toco de todo un poco, solo con excepcion de reggaeton y cumbias.",
             "publish_date": "2019-04-03"
         }
     },
