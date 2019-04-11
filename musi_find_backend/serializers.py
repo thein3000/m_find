@@ -37,7 +37,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all())
     class Meta:
         model = Profile #'profile_id',
-        fields = ('description','mobile','email','facebook','twitter','instrument','genre')
+        fields = ('description', 'mobile', 'email', 'facebook', 'twitter', 'instrument', 'genre')
 
 
 # Actualizar is_musician
