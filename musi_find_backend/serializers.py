@@ -5,7 +5,10 @@ from musi_find_backend.models import Instrument
 from musi_find_backend.models import Genre
 from musi_find_backend.models import Follow
 from musi_find_backend.models import Publication
+from musi_find_backend.models import Message
+from musi_find_backend.models import Ban
 from django.contrib.auth.models import User
+import datetime
 
 # Todo el rollo de autenticacion, sesiones y usuarios
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -125,3 +128,53 @@ class FullProfileFlatSerializer(serializers.ModelSerializer):
         user = User.objects.get(pk=obj.profile_id)
         username = user.username
         return username
+
+# Manejar mensajes
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = ('id','sender_id','recipient_id','time_sent','content','seen')
+
+    def create(self, validated_data):
+        message = super(MessageSerializer, self).create(validated_data)
+        message.sender_id = self.context.get('user_id')
+        message.save()
+        return message
+
+
+# Mostrar perfiles con su rspectiva cantidad e mensajes no vistos con respecto al propio perfil
+class ChatProfileFlatSerializer(serializers.ModelSerializer):
+    profile_name = serializers.SerializerMethodField()
+    profile_username = serializers.SerializerMethodField()
+    count_of_unseen = serializers.SerializerMethodField()
+    class Meta:
+        model = Profile
+        fields = ('profile_id','profile_username','profile_name','count_of_unseen')
+
+    def get_profile_name(self, obj):
+        user = User.objects.get(pk=obj.profile_id)
+        full_name = user.first_name + ' ' + user.last_name
+        return full_name
+
+    def get_profile_username(self, obj):
+        user = User.objects.get(pk=obj.profile_id)
+        username = user.username
+        return username
+
+    def get_count_of_unseen(self, obj):
+        main_profile_id = self.context.get('user_id')
+        other_id = obj.profile_id
+        count_of_unseen = Message.objects.filter(recipient_id = main_profile_id).filter(sender_id=other_id).filter(seen=False).count()
+        return count_of_unseen
+
+# Generar registros de baneamento desde propio perfil a otro
+class BanSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ban
+        fields = ('banned',)
+
+    def create(self, validated_data):
+        ban = super(BanSerializer, self).create(validated_data)
+        ban.banner = self.context.get('user_id')
+        ban.save()
+        return ban

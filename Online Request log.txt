@@ -55,6 +55,28 @@ curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?pr
 CONSEGUIR DATOS DE PROPIO PERFIL
 curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
 
+------------------------------------------------------------------------------
+DAR DE ALTA UN MENSAJE DE PROPIO PERFIL A OTRO
+curl -X POST -d "&recipient_id=2&content=Hola, estoy interesado en tus servicios" https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&recipient_id=2&content=Hola, estoy interesado en tus servicios" https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/ -H "Authorization: Token e9d5f1a376a1011560d0092d69f5da532882f3cd"
+
+MARCAR MENSAJES DE PROPIO PERFIL CON RESPECTO A OTRO COMO VISTOS
+curl -X POST -d "&other_id=2" https://m-find.herokuapp.com/musi_find_backend/messages/mark_messages_as_seen/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+
+BANNEAR UN PERFIL (La forma en que se va manejar lo del rechazo de una solicitud de chat)
+curl -X POST -d "&banned=3" https://m-find.herokuapp.com/musi_find_backend/ban/ban_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+
+-----------------------------------------------------------------------------
+CONSEGUIR MESNAJES DE UN CHAT DESDE PROPIO PERFIL CON RESPECTO A OTRO
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/?other_id=2 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+
+CONSEGUIR TOTAL NUMERO DE MENSAJES NO PERCIBIDOS POR PROPIA CUENTA
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/number_of_new_messages/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/number_of_new_messages/ -H "Authorization: Token e9d5f1a376a1011560d0092d69f5da532882f3cd"
+
+CONSEGUIR LISTA DE PERFILES (con los que hay una conversacion) CON RESPECTIVA CANTIDAD DE MENSAJES NO VISTOS POR UNO
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+------------------------------------------------------------------------------
 
 
 

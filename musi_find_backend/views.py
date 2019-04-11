@@ -7,7 +7,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 from musi_find_backend.serializers import CreateUserSerializer
 from rest_framework import authentication, permissions
-from musi_find_backend.models import Profile, Instrument, Genre, Follow, Publication
+from musi_find_backend.models import Profile, Instrument, Genre, Follow, Publication, Message, Ban
 from musi_find_backend.serializers import ProfileSerializer
 from musi_find_backend.serializers import InstrumentSerializer
 from musi_find_backend.serializers import GenreSerializer
@@ -16,6 +16,9 @@ from musi_find_backend.serializers import IsMusicianSerializer
 from musi_find_backend.serializers import FollowSerializer
 from musi_find_backend.serializers import PublicationSerializer
 from musi_find_backend.serializers import FullProfileFlatSerializer
+from musi_find_backend.serializers import MessageSerializer
+from musi_find_backend.serializers import ChatProfileFlatSerializer
+from musi_find_backend.serializers import BanSerializer
 import datetime
 
 class RetrieveInstruments(APIView):
@@ -158,6 +161,71 @@ class ListFollowedProfiles(APIView):
         serializer = ProfileViewerSerializer(profiles, many=True)
         return Response(serializer.data)
 
+class ChatMessages(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def get(self, request, format=None):
+        main_user_id = request.user.id
+        other_user_id = int(self.request.query_params.get('other_id', None))
+        involved_users = [main_user_id, other_user_id]
+        chat_messages = Message.objects.filter(sender_id__in = involved_users).filter(recipient_id__in = involved_users)
+        serializer = MessageSerializer(chat_messages, many=True)
+        return Response(serializer.data)
+
+    def post(self,request, format=None):
+        context = {'user_id': request.user.id}
+        serializer = MessageSerializer(data=request.data, context=context)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class MarkMessagesAsSeen(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def post(self,request, format=None):
+        other_id = int(request.data.get('other_id'))
+        profile = Profile.objects.filter(pk=other_id)
+        if profile.count() >= 1:
+            unseen_messages = Message.objects.filter(sender_id = other_id).filter(recipient_id = request.user.id).filter(seen=False)
+            unseen_messages.update(seen=True)
+            return Response({'success': True}, status=status.HTTP_201_CREATED)
+        return Response({'success': False}, status=status.HTTP_400_BAD_REQUEST)
+
+class NumberOfNewMessages(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def get(self, request, format=None):
+        ban_list =  Ban.objects.filter(banner=request.user.id).values_list('banned',flat=True)
+        number_of_messages = Message.objects.filter(recipient_id = request.user.id).filter(seen = False).exclude(sender_id__in=ban_list).count()
+        return Response({"message_count": number_of_messages})
+
+
+class ChatProfiles(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def get(self, request, format=None):
+        context = {'user_id': request.user.id}
+        main_user_id = request.user.id
+        profiles_one_has_sent_to = list(Message.objects.filter(sender_id = main_user_id).values_list('recipient_id', flat=True))
+        profile_that_have_sent_to_one = list(Message.objects.filter(recipient_id = main_user_id).values_list('sender_id', flat=True))
+        profiles_with_chat = profiles_one_has_sent_to + profile_that_have_sent_to_one
+        print(profiles_with_chat)
+        ban_list =  Ban.objects.filter(banner=main_user_id).values_list('banned',flat=True)
+        profiles = Profile.objects.filter(pk__in=profiles_with_chat).exclude(pk__in=ban_list).exclude(pk=main_user_id)
+        serializer = ChatProfileFlatSerializer(profiles, many=True, context=context)
+        return Response(serializer.data)
+
+class BanProfile(APIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+
+    def post(self, request, format=None):
+        context = {'user_id': request.user.id}
+        serializer = BanSerializer(data=request.data, context=context)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CreateUserAPIView(CreateAPIView):
     serializer_class = CreateUserSerializer

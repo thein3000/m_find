@@ -3,6 +3,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 from .views import CreateUserAPIView, LogoutUserAPIView
 from .views import HandleProfile, RetrieveGenres, RetrieveInstruments, ListFlatProfiles, UpdateIsMusician
 from .views import AddFollow, HandlePublication, ListFollowedProfiles, FullProfile, OwnFullProfile
+from .views import ChatMessages, NumberOfNewMessages, ChatProfiles, MarkMessagesAsSeen, BanProfile
 
 urlpatterns = [
     url('auth/login/', obtain_auth_token, name='auth_user_login'),
@@ -18,4 +19,9 @@ urlpatterns = [
     url('publication/handle_publication/', HandlePublication.as_view(), name='handle_publication'),
     url('retrieve_instruments/', RetrieveInstruments.as_view(), name='retrieve_instruments'),
     url('retrieve_genres/', RetrieveGenres.as_view(), name='retrieve_genres'),
+    url('messages/chat_messages/', ChatMessages.as_view(), name='chat_messages'),
+    url('messages/number_of_new_messages/', NumberOfNewMessages.as_view(), name='number_of_new_messages'),
+    url('messages/chat_profiles/', ChatProfiles.as_view(), name='chat_profiles'),
+    url('messages/mark_messages_as_seen/', MarkMessagesAsSeen.as_view(), name='mark_messages_as_seen'),
+    url('ban/ban_profile/', BanProfile.as_view(), name='ban_profile'),
 ]

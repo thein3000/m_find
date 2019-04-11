@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Instrument(models.Model):
     name = models.CharField("Nombre", max_length=30)
 
@@ -38,3 +39,13 @@ class Follow(models.Model):
     follower_id = models.IntegerField("Seguidor", blank=True, null=True)
     followed_id = models.ForeignKey(Profile, verbose_name="Seguido",on_delete=models.CASCADE)
     
+class Message(models.Model):
+    sender_id = models.IntegerField("Emisor", blank=True, null=True)
+    recipient_id = models.IntegerField("Receptor", blank=True, null=True)
+    time_sent = models.DateTimeField("Fecha hora de envio",auto_now_add=True, blank=True)
+    content = models.CharField("Contenido", max_length=500)
+    seen = models.BooleanField("Visto", default=False)
+
+class Ban(models.Model):
+    banner = models.IntegerField("Baneador", blank=True, null=True)
+    banned = models.IntegerField("Baneado", blank=True, null=True)
