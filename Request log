@@ -1,6 +1,8 @@
 LOGIN
 curl -X POST -d "username=oabrego&password=secretos" http://localhost:8000/musi_find_backend/auth/login/
 curl -X POST -d "username=samanthe123&password=secretos" http://localhost:8000/musi_find_backend/auth/login/
+curl -X POST -d "username=ronaldo.medina@gmail.com&password=secretos" http://localhost:8000/musi_find_backend/auth/login/
+
 
 LOGOUT
 curl -X GET http://localhost:8000/musi_find_backend/auth/logout/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"

@@ -127,9 +127,10 @@
             "mobile": "8113995183",
             "email": "oscar.abrego@gmail.com",
             "facebook": "oabrego2",
-            "twitter": "",
+            "twitter": "OscarAbregoDiaz",
             "instrument": 1,
-            "genre": 7
+            "genre": 7,
+            "gender": "Masculino"
         }
     },
     {
@@ -138,12 +139,13 @@
         "fields": {
             "is_musician": true,
             "description": "Soy baterista desde hace 10 años, actualmente estoy buscando una banda por si les interesa, tambien estoy disponible para asistir a tocadas. Ahi esta mi informacion.",
-            "mobile": "8116060302",
+            "mobile": "8125828661",
             "email": "raul.musico9@gmail.com",
-            "facebook": "",
+            "facebook": "raul.emg",
             "twitter": "",
             "instrument": 2,
-            "genre": 1
+            "genre": 1,
+            "gender": "Masculino"
         }
     },
     {
@@ -157,7 +159,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -171,7 +174,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -185,7 +189,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -199,7 +204,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -213,7 +219,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -227,7 +234,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -241,7 +249,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -255,7 +264,8 @@
             "facebook": "",
             "twitter": "",
             "instrument": 3,
-            "genre": 3
+            "genre": 3,
+            "gender": "Masculino"
         }
     },
     {
@@ -394,6 +404,135 @@
         "fields": {
             "follower_id": 3,
             "followed_id": 1
+        }
+    },    
+    {
+        "model": "musi_find_backend.message",
+        "pk": 10,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 2,
+            "time_sent": "2019-04-11T16:26:26.956Z",
+            "content": "Buenos dias",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 11,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 2,
+            "time_sent": "2019-04-11T16:26:43.349Z",
+            "content": "Como estas hoy?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 12,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 2,
+            "time_sent": "2019-04-11T16:26:59.828Z",
+            "content": "Me alegro",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 13,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 3,
+            "time_sent": "2019-04-11T16:27:37.051Z",
+            "content": "Hola",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 14,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 3,
+            "time_sent": "2019-04-11T16:32:45.240Z",
+            "content": "Hola tengo unas dudas",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 15,
+        "fields": {
+            "sender_id": 3,
+            "recipient_id": 2,
+            "time_sent": "2019-04-11T16:35:37.287Z",
+            "content": "Hola, heme aqui",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 16,
+        "fields": {
+            "sender_id": 3,
+            "recipient_id": 2,
+            "time_sent": "2019-04-11T16:35:58.467Z",
+            "content": "Que le acontece?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 17,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 3,
+            "time_sent": "2019-04-11T16:36:32.386Z",
+            "content": "Que cuenta?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 18,
+        "fields": {
+            "sender_id": 3,
+            "recipient_id": 1,
+            "time_sent": "2019-04-11T16:38:16.483Z",
+            "content": "Que le acontece?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 19,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 3,
+            "time_sent": "2019-04-11T16:38:30.927Z",
+            "content": "Que cuenta?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.message",
+        "pk": 20,
+        "fields": {
+            "sender_id": 1,
+            "recipient_id": 4,
+            "time_sent": "2019-04-11T17:19:14.996Z",
+            "content": "Que cuenta?",
+            "seen": false
+        }
+    },
+    {
+        "model": "musi_find_backend.ban",
+        "pk": 3,
+        "fields": {
+            "banner": 1,
+            "banned": 6
         }
     }
 ]

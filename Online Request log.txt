@@ -1,8 +1,9 @@
 LOGIN
 curl -X POST -d "username=oabrego&password=secretos" https://m-find.herokuapp.com/musi_find_backend/auth/login/
+curl -X POST -d "username=samantha123&password=secretos" https://m-find.herokuapp.com/musi_find_backend/auth/login/
 
 LOGOUT
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/auth/logout/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/auth/logout/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 REGISTER
 curl -X POST -d "username=oabrego&password=secretos&first_name=Oscar&last_name=Abrego" https://m-find.herokuapp.com/musi_find_backend/auth/register/
@@ -17,65 +18,65 @@ curl -X POST -d "username=hugo123&password=secretos&first_name=Hugo&last_name=Sa
 curl -X POST -d "username=luis123&password=secretos&first_name=Luis&last_name=Guerra" https://m-find.herokuapp.com/musi_find_backend/auth/register/
 
 CONSEGUIR TODO CATALOGO DE INSTRUMENTOS
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_instruments/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_instruments/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR TODO CATALOGO DE GENEROS
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_genres/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/retrieve_genres/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 ACTUALIZAR PROPIO PERFIL
-curl -X POST -d "&description=Aspirante en busca de aprendizaje&mobile=8113995183&email=oscara99@gmail.com&facebook=oabrego2&instrument=3&genre=5" https://m-find.herokuapp.com/musi_find_backend/profile/handle_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&description=Aspirante en busca de aprendizaje&mobile=8113995183&email=oscara99@gmail.com&facebook=oabrego2&instrument=3&genre=5" https://m-find.herokuapp.com/musi_find_backend/profile/handle_profile/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR TODOS LOS PERFILES DE OTROS MUSICOS, PARA SER FILTRADO POR EL LADO DE REACT NATIVE [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_flat_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_flat_profiles/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR DE PROPIO PERFIL CAMPO IS_MUSICIAN
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/update_is_musician/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/update_is_musician/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 ACTUALIZAR PROPIO PERFIL CAMPO IS_MUSICIAN
-curl -X POST -d "&is_musician=true" https://m-find.herokuapp.com/musi_find_backend/profile/update_is_musician/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&is_musician=true" https://m-find.herokuapp.com/musi_find_backend/profile/update_is_musician/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 DAR DE ALTA UN FOLLOW PROPIO A OTRO PERFIL
-curl -X POST -d "&followed_id=3" https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&followed_id=3" https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 DAR DE ALTA UNA PUBLICACION DE PROPIO PERFIL
-curl -X POST -d "&title=Educacion&content=Estudiante de la facultad de música de la UANL" https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&title=Educacion&content=Estudiante de la facultad de música de la UANL" https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR TODOS LOS PERFILES DE MUSICO FOLLOWEADOS POR UNO [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_followed_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/list_followed_profiles/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR DATOS PERFIL DE ALQUIEN INCLUYENDO [INSTRUMENTO, GENERO]
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/full_profile/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/full_profile/?profile_id=3 -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR PUBLICACIONES DE UN PERFIL
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/publication/handle_publication/?profile_id=3 -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CARGAR SI PERFIL YA ES FOLLOWEADO POR TI
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/follow/add_follow/?profile_id=3 -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR DATOS DE PROPIO PERFIL
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/profile/own_full_profile/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 ------------------------------------------------------------------------------
 DAR DE ALTA UN MENSAJE DE PROPIO PERFIL A OTRO
-curl -X POST -d "&recipient_id=2&content=Hola, estoy interesado en tus servicios" https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&recipient_id=2&content=Hola, estoy interesado en tus servicios" https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 curl -X POST -d "&recipient_id=2&content=Hola, estoy interesado en tus servicios" https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/ -H "Authorization: Token e9d5f1a376a1011560d0092d69f5da532882f3cd"
 
 MARCAR MENSAJES DE PROPIO PERFIL CON RESPECTO A OTRO COMO VISTOS
-curl -X POST -d "&other_id=2" https://m-find.herokuapp.com/musi_find_backend/messages/mark_messages_as_seen/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&other_id=2" https://m-find.herokuapp.com/musi_find_backend/messages/mark_messages_as_seen/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 BANNEAR UN PERFIL (La forma en que se va manejar lo del rechazo de una solicitud de chat)
-curl -X POST -d "&banned=3" https://m-find.herokuapp.com/musi_find_backend/ban/ban_profile/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X POST -d "&banned=3" https://m-find.herokuapp.com/musi_find_backend/ban/ban_profile/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 -----------------------------------------------------------------------------
-CONSEGUIR MESNAJES DE UN CHAT DESDE PROPIO PERFIL CON RESPECTO A OTRO
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/?other_id=2 -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+CONSEGUIR MENSAJES DE UN CHAT DESDE PROPIO PERFIL CON RESPECTO A OTRO
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_messages/?other_id=2 -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 
 CONSEGUIR TOTAL NUMERO DE MENSAJES NO PERCIBIDOS POR PROPIA CUENTA
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/number_of_new_messages/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/number_of_new_messages/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/number_of_new_messages/ -H "Authorization: Token e9d5f1a376a1011560d0092d69f5da532882f3cd"
 
 CONSEGUIR LISTA DE PERFILES (con los que hay una conversacion) CON RESPECTIVA CANTIDAD DE MENSAJES NO VISTOS POR UNO
-curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_profiles/ -H "Authorization: Token c3304cf33bdbfda464bdf7b1383408ecf20d4b66"
+curl -X GET https://m-find.herokuapp.com/musi_find_backend/messages/chat_profiles/ -H "Authorization: Token b0a0d0321a12d083f9e61f790766830ac0126c19"
 ------------------------------------------------------------------------------
 
 
