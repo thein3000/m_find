@@ -18,7 +18,7 @@ class Profile(models.Model):
     twitter = models.CharField("Twitter", max_length=30, blank=True)
     instrument = models.ForeignKey(Instrument, verbose_name="Instrumento principal", null=True, blank=True, on_delete=models.SET_NULL)
     genre = models.ForeignKey(Genre, verbose_name="Genero principal", null=True, blank=True,on_delete=models.SET_NULL)
-    gender = models.CharField("Sexo", max_length=10, default='Masculino', blank=True)
+    gender = models.CharField("Sexo", max_length=10, default='Masculino', blank=True, null=True)
 
 class Publication(models.Model):
     profile = models.ForeignKey(Profile, verbose_name="Publicante",null=True, blank=True, on_delete=models.CASCADE)

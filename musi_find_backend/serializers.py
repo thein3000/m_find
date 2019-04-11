@@ -40,7 +40,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all())
     class Meta:
         model = Profile #'profile_id',
-        fields = ('description', 'mobile', 'email', 'facebook', 'twitter', 'instrument', 'genre')
+        fields = ('description', 'mobile', 'email', 'facebook', 'twitter', 'instrument', 'genre','gender')
 
 
 # Actualizar is_musician
@@ -71,7 +71,7 @@ class ProfileViewerSerializer(serializers.ModelSerializer):
     profile_username = serializers.SerializerMethodField()
     class Meta:
         model = Profile
-        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_name','profile_username','is_musician')
+        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_name','profile_username','is_musician','gender')
 
     def get_instrument_name(self, obj):
         return obj.instrument.name
@@ -111,7 +111,7 @@ class FullProfileFlatSerializer(serializers.ModelSerializer):
     profile_username = serializers.SerializerMethodField()
     class Meta:
         model = Profile
-        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_username','profile_name','is_musician')
+        fields = ('profile_id','description','mobile','email','facebook','twitter','instrument_name','genre_name','profile_username','profile_name','is_musician','gender')
 
     def get_instrument_name(self, obj):
         return obj.instrument.name
